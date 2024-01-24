@@ -14,3 +14,5 @@ function App() {
 }
 
 export default App;
+
+//https://www.toptal.com/react/rxjs-react-state-management
