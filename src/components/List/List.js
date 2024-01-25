@@ -5,9 +5,10 @@ import styles from './List.module.scss';
 
 import Column from '../Column/Column.js';
 import ColumnForm from '../ColumnForm/ColumForm';
+import { getAllColumns } from '../../redux/store';
 
 const List = () => {
-    const columns = useSelector(state => state.columns);
+    const columns = useSelector(getAllColumns);
 
     useEffect(() => {
     }, []);

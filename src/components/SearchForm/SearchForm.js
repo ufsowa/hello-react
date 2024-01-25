@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { search } from '../../redux/store.js';
 
 import Button from '../Button/Button.js';
 import TextInput from '../TextInput/TextInput.js';
@@ -12,7 +13,7 @@ const SearchForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch({type: 'SEARCH', payload: searchText});
+        dispatch(search(searchText));
     };
 
     return (

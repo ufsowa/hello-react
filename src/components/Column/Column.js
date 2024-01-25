@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 
 import Card from '../Card/Card.js';
 import CardForm from '../CardForm/CardForm.js';
+
 import styles from './Column.module.scss';
+
+import { getFilteredCards } from '../../redux/store';
 
 const Column = props => {
 
-    const searchTxt = useSelector(state => state.searchText) 
-    const cards = useSelector(state => state.cards.filter(card =>
-        card.columnId === props.id && card.title.toLowerCase().includes(searchTxt.toLowerCase())));
+    const cards = useSelector(state => getFilteredCards(state, props.id));
 
     return (
         <article className={styles.column}>
@@ -28,7 +29,7 @@ const Column = props => {
 
 Column.propTypes = {
     title: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
 };
 
