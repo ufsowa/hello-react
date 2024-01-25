@@ -8,7 +8,9 @@ import styles from './Column.module.scss';
 
 const Column = props => {
 
-    const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id));
+    const searchTxt = useSelector(state => state.searchText) 
+    const cards = useSelector(state => state.cards.filter(card =>
+        card.columnId === props.id && card.title.toLowerCase().includes(searchTxt.toLowerCase())));
 
     return (
         <article className={styles.column}>
