@@ -10,10 +10,6 @@ const Column = props => {
 
     const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id));
 
-    const addCard = (newCard, columndId) => {
-        props.action(newCard, columndId);
-    };
-
     return (
         <article className={styles.column}>
             <h2 className={styles.title}>
@@ -23,7 +19,7 @@ const Column = props => {
             <ul className={styles.cards}>
                 {cards.map(card => <Card key={card.id}> {card.title} </Card>)}
             </ul>
-            <CardForm columnId={props.id} action={addCard}/>
+            <CardForm columnId={props.id}/>
         </article>
     );
 };
