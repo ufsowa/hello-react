@@ -3,4 +3,9 @@
 .searchForm {
     display: flex;
     justify-content: center;
+    margin: $base-size 0;
+
+    input {
+        margin: 0 5px;
+    }
 }
