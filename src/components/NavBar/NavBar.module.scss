@@ -1,0 +1,27 @@
+@import '../../styles/settings.scss';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    color: $color-light;
+    background-color: darken($color-dark, 3%);
+
+    ul li {
+        display: inline;
+        margin: 0 5px;
+
+        a {
+            font-size: $base-size;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-light;
+        font-size: 24px;
+        margin: auto 0;
+
+    }
+}
+
