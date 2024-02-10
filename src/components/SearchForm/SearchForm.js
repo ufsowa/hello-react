@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { search } from '../../redux/store.js';
 
@@ -10,6 +10,11 @@ import styles from './SearchForm.module.scss';
 const SearchForm = () => {
     const [searchText, setSearchText] = useState('');
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(search(searchText));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
