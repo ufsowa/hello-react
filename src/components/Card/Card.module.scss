@@ -11,6 +11,15 @@
     justify-content: space-between;
     font-weight: bold;
 
+    a {
+        text-decoration: none;
+        color: $color-dark;
+
+        i {
+            margin: 0 5px;
+        }
+    }
+
     .isFavorite {
         color: $color-gold;
     }
