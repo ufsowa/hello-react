@@ -3,7 +3,7 @@ import styles from './Lists.module.scss';
 import { useSelector } from "react-redux";
 import { Link } from 'react-router-dom'
 
-import { getAllLists } from '../../redux/store.js';
+import { getAllLists } from '../../redux/listsRedux.js';
 import ListForm from '../ListForm/ListForm';
 
 

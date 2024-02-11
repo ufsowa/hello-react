@@ -7,7 +7,7 @@ import CardForm from '../CardForm/CardForm.js';
 
 import styles from './Column.module.scss';
 
-import { getFilteredCards } from '../../redux/store';
+import { getFilteredCards } from '../../redux/cardsRedux.js';
 
 const Column = props => {
 

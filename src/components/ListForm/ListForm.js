@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
 
 import styles from './ListForm.module.scss';
-import { addList } from '../../redux/store.js';
+import { addList } from '../../redux/listsRedux.js';
 
 const ListForm = ({listId}) => {
     let [ title, setTitle ] = useState('');

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { search } from '../../redux/store.js';
+import { search } from '../../redux/searchStringRedux.js';
 
 import Button from '../Button/Button.js';
 import TextInput from '../TextInput/TextInput.js';

@@ -9,7 +9,7 @@ import Column from '../Column/Column.js';
 import ColumnForm from '../ColumnForm/ColumForm';
 import SearchForm from '../SearchForm/SearchForm.js'
 
-import { getListColumns, getListById } from '../../redux/store';
+import { getListColumns, getListById } from '../../redux/listsRedux.js';
 
 const List = () => {
     const { listId } = useParams();

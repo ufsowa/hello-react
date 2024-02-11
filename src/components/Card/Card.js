@@ -2,7 +2,7 @@ import styles from './Card.module.scss';
 import cslx from 'clsx';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { toggleFavorite, removeCard } from '../../redux/store.js'
+import { toggleFavorite, removeCard } from '../../redux/cardsRedux.js';
 
 const Card = ({id, title, isFavorite }) => {
     const dispatch = useDispatch();
